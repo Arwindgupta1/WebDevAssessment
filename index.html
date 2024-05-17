@@ -1,14 +1,248 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Festival</title>
+    <title>Post Pandemic Music Festival 2024</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpeg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#about">About Festival</a></li>
+                    <li><a href="#lineup">Line-UP</a></li>
+                    <li><a href="#stages">Stages</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <img src="images/cancel_11820039.png" class="menu" onclick="closemenu()">
+                </ul>
+                <img src="images/menu_8695433.png" class="menu" onclick="openmenu()">
+            </nav>
+            <div class="header-text">
+                <p>Post Pandemic Music Festival</p>
+                <h1>Hi there, this <span>Big Event</span><br>will happen 20 June 2024<span> !!!</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------about---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/pexels-mikky-k-158844-625644.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Festival</h1>
+                    <p>
+                        🎶🎉 Get ready for an unforgettable music festival experience in Hoddesdon, England, this year!
+                        On June 20, 2024, starting at 16:00, two stages will come alive simultaneously with electrifying
+                        performances. While tickets aren't on sale just yet, keep an eye out closer to the event date.
+                        Expect a plethora of fun activities and attractions to keep the excitement going throughout the
+                        day. Mark your calendars for a day filled with music, laughter, and unforgettable memories! 🎤🎸
+                    </p>
 
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('tickets')">Tickets</p>
+                        <p class="tab-links" onclick="opentab('location')">Location</p>
+                        <p class="tab-links" onclick="opentab('partners')">Event Partners</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="tickets">
+                        <ul>
+                            <li><span>NOT YET AVAILABLE</span>
+                                <br>Tickets will be in sale exactly 2 weeks before Even starts.<br>
+                                So check this website 06.06.2024 from 12:00.
+                            </li>
+                            <li><span>Prices</span><br>
+                                Be prepared - our tickets will be just in 3 types: <br>
+                                - level 1 - £99 - entrence with basic access to both Stages only<br>
+                                - level 2 - £149 - all level 1 + access to free beer station on stage 2 shops<br>
+                                - level 3 - £399 - all level 1 and 2 + access to backstage to meet your favourite artist
+
+                            </li>
+                            <li><span>Avialability to buy</span><br>Only 5 tickets can be sold to one person, discount
+                                20% will apply only when 5 tickets bought at once and minimum one will be level 3
+                                ticket. </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="location">
+                        <ul>
+                            <li><span>How to get to the Festival</span><br>
+
+                                🚗🛫 Heading to the festival? Navigate your way to the old airport in Hoddesdon! Once
+                                you reach Hoddesdon Town, follow the signs guiding you to the main car park and the
+                                festival grounds. The postcode CM20 0TS will help you pinpoint the location. With clear
+                                directions and ample signage, getting to the festival will be a breeze. Get ready to
+                                embark on a musical journey at this exciting venue! 🎶🎪</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="partners">
+                        <ul>
+                            <li><span>Hoddesdon Council</span><br>
+                                🎉🎶 Exciting news! We're thrilled to announce that Hoddesdon Council is the main
+                                partner of our Post Pandemic Music Festival 2024. Their support and collaboration have
+                                been instrumental in bringing this event to life. Together, we're creating a vibrant
+                                celebration of music and community spirit. Get ready for an unforgettable experience as
+                                we come together to celebrate the joy of music in Hoddesdon! 🎤🎸</li>
+                            <li><span>BBC</span><br>
+                                📺🎥 We're proud to announce that the BBC is joining us as another key partner for our
+                                Post Pandemic Music Festival! They'll be recording the event and broadcasting it on TV,
+                                bringing the magic of the festival to screens across the nation. It's an incredible
+                                opportunity to share the excitement and energy of the festival with a wider audience.
+                                Get ready to be a part of something truly special as we showcase the best of music and
+                                entertainment in Hoddesdon! 🎶📡</li>
+                            <li><span>Hoddesdon small bussinesses</span><br>
+                                🎉🍔 Get ready for a feast of local delights at our Post Pandemic Music Festival in
+                                Hoddesdon! We're thrilled to announce that Hoddesdon's vibrant community of small
+                                businesses will be out in force, supporting the event with a delicious array of food,
+                                drinks, gadgets, and more. From mouthwatering treats to unique finds, they're adding the
+                                perfect touch to make this event truly unforgettable. Let's come together to celebrate
+                                local talent, creativity, and community spirit in style! 🎶🛍️</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------Line-UP---------------- -->
+    <div id="lineup">
+        <div class="container">
+            <h1 class="sub-title">Line-Up</h1>
+            <div class="lineup-list" id="stages">
+                <div>
+                    <h2>Main Stage</h2>
+                    <p>
+                        🎵🎤 Get ready to be dazzled! The main stage, positioned on the left-hand side upon entrance,
+                        commands attention with its massive gate. Prepare for an unforgettable showcase of talent as
+                        acclaimed artists take center stage, delivering electrifying performances that will leave you
+                        breathless. With vibrant energy and captivating artistry, each artist promises to transport you
+                        on a musical journey like no other. 🌟🎸</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Stage 2</h2>
+                    <p>🎉🎈 Stage 2, located on the right side upon entrance, promises endless fun for our younger
+                        guests! As a special treat, all children will enjoy complimentary drinks throughout the event.
+                        This stage is dedicated to creating memorable moments for kids, with entertaining games, lively
+                        shows, and plenty of opportunities to make new friends. Join us for a day filled with laughter,
+                        excitement, and unforgettable experiences for the whole family! 🎶👧🧒</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ----------FAQ------------ -->
+    <div id="faq">
+        <div class="container">
+            <h1 class="sub-title">FAQ</h1>
+            <div class="faq-list">
+                <div class="faq">
+                    <img src="images/pexels-leeloothefirst-5428835.jpg">
+                    <div class="layer">
+                        <h3>🎶 FAQs about the Music Festival:</h3>
+                        <p>
+                            Curious about the festival's lineup, ticketing, or parking? Look no further! Here, you'll
+                            find all the essential information about the music festival itself. From performance
+                            schedules to entry requirements, we've got you covered every step of the way. Get ready to
+                            rock out with us!
+                        </p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="faq">
+                    <img src="images/pexels-ann-h-45017-10988368.jpg">
+                    <div class="layer">
+                        <h3>🎪 FAQs about Other Attractions:</h3>
+                        <p>
+                            Wondering what else is in store beyond the music? Dive into this section to discover the
+                            myriad of attractions awaiting you! From delectable food options to exciting activities for
+                            all ages, there's something for everyone to enjoy. Get ready to immerse yourself in a world
+                            of fun and adventure!
+                        </p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="faq">
+                    <img src="images/pexels-leeloothefirst-5428828.jpg">
+                    <div class="layer">
+                        <h3>📱 Event App <Applet></Applet>
+                        </h3>
+                        <p>
+                            Exciting news!
+                            An event app is on its way to enhance your festival experience. While currently under
+                            construction, this soon-to-be-released app will offer a plethora of features designed to
+                            make your time at the festival even more enjoyable. Stay tuned for updates as we put the
+                            finishing touches on this must-have companion for your festival adventure! 🚀🚀🚀
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------contact------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Us</h1>
+                    <p> contact@ppmf.com</p>
+                    <p> <img src="images/phone-call_4213179.png" /><a href="tel:123456789">123-456-789</a></p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/" target="_blank"><img src="images/facebook_145802.png" /> </a>
+                        <a href="https://twitter.com/" target="_blank"><img src="images/twitter_3670151.png" /></a>
+                        <a href="https://instagram.com/" target="_blank"><img src="images/instagram_3955024.png" /></a>
+                        <a href="https://linkedin.com/" target="_blank"><img src="images/linkedin_4782336.png" /></a>
+                    </div>
+                    <a href="images/eventmap.png" download class="btn btn2">Download Event Map</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><i>Copyright © Post Pandemic Music Festival 20 June 2024 </i></p>
+        </div>
+    </div>
+
+
+    <script>
+        const scriptURL = '< add you own link here >' // add your own app script link here
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script src="scripts/sideMenu.js"></script>
+    <script src="scripts/activeTabs.js"></script>
 </body>
 
 </html>
+
+
+<!-- icons taken from https://www.freepik.com/ - free website-->
