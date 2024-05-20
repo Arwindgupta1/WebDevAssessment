@@ -217,9 +217,11 @@
                 </div>
                 <div class="contact-right">
                     <form id="contactForm" action="/submit-form" method="POST">
-                        <input type="text" name="Name" id="name" placeholder="Your Name" required>
-                        <input type="email" name="Email" id="email" placeholder="Your Email" required>
-                        <textarea name="Message" id="message" rows="6" placeholder="Your Message" required></textarea>
+                        <input type="text" name="Name" id="name" placeholder="Your Name" autocomplete="name" required>
+                        <input type="email" name="Email" id="email" placeholder="Your Email" autocomplete="email"
+                            required>
+                        <textarea name="Message" id="message" rows="6" placeholder="Your Message" autocomplete="off"
+                            required></textarea>
                         <button type="submit" class="btn btn2" title="Submit form">Submit</button>
                     </form>
                     <span id="msg"></span>

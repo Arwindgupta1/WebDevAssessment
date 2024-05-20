@@ -8,7 +8,7 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	background: #080808;
+	background: #000000;
 	color: #fff;
 }
 #header {
@@ -177,7 +177,7 @@ nav ul li a:hover::after {
 	display: inline-block;
 }
 .lineup-list div:hover {
-	background: #ff004f;
+	background: #3dc702cb;
 	transform: translateY(-10px);
 }
 /* -------FAQ----------- */
@@ -204,7 +204,7 @@ nav ul li a:hover::after {
 .layer {
 	width: 100%;
 	height: 0;
-	background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+	background: linear-gradient(rgba(0, 0, 0, 0.6), #3dc702cb);
 	border-radius: 10px;
 	position: absolute;
 	left: 0;
@@ -245,6 +245,8 @@ nav ul li a:hover::after {
 .btn {
 	display: block;
 	margin: 50px auto;
+	width: -moz-fit-content; /* For Firefox and Firefox for Android */
+	width: -webkit-fit-content; /* For Chrome, Safari, and newer versions of Edge */
 	width: fit-content;
 	border: 1px solid #ffffff;
 	padding: 14px 50px;
@@ -402,7 +404,7 @@ form .btn2 {
 
 	nav ul li a {
 		color: #fff;
-		font-size: 16px;
+		font-size: 15px;
 	}
 	.header-text {
 		font-size: 30px;
@@ -464,7 +466,7 @@ nav .menu {
 		background-image: url(/images/pexels-wendywei-1540406.jpg);
 	}
 	.header-text {
-		margin-top: 100%;
+		margin-top: 10%;
 		font-size: 16px;
 	}
 	.header-text h1 {
