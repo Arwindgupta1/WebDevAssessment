@@ -1,41 +1,60 @@
-function validateForm() {
-	var name = document.getElementById("name").value.trim(); //trim() is used to delete white spaces
-	var email = document.getElementById("email").value.trim();
-	var message = document.getElementById("message").value.trim();
+function validateForm(event) {
+	event.preventDefault();
+
+	var nameElement = document.getElementById("name");
+	var emailElement = document.getElementById("email");
+	var messageElement = document.getElementById("message");
+
+	var name = nameElement.value.trim();
+	var email = emailElement.value.trim();
+	var message = messageElement.value.trim();
 
 	var isValid = true;
 
-	// Validating Name
 	if (name === "") {
 		isValid = false;
-		document.getElementById("name").classList.add("error");
+		nameElement.classList.add("error");
 	} else {
-		document.getElementById("name").classList.remove("error");
+		nameElement.classList.remove("error");
 	}
 
-	// Validating Email
 	var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 	if (!emailRegex.test(email)) {
 		isValid = false;
-		document.getElementById("email").classList.add("error");
+		emailElement.classList.add("error");
 	} else {
-		document.getElementById("email").classList.remove("error");
+		emailElement.classList.remove("error");
 	}
 
-	// Validating Message
 	if (message === "") {
 		isValid = false;
-		document.getElementById("message").classList.add("error");
+		messageElement.classList.add("error");
 	} else {
-		document.getElementById("message").classList.remove("error");
+		messageElement.classList.remove("error");
 	}
 
-	if (!isValid) {
+	if (isValid) {
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "/submit-form", true);
+		xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				document.getElementById("msg").innerText = xhr.responseText;
+				setTimeout(function () {
+					document.getElementById("contactForm").reset();
+					document.getElementById("msg").innerText = "";
+				}, 3000);
+			} else if (xhr.readyState === 4) {
+				document.getElementById("msg").innerText = "Failed to save data.";
+			}
+		};
+		xhr.send(JSON.stringify({ name: name, email: email, message: message }));
+	} else {
 		document.getElementById("msg").innerText =
 			"Please fill out all required fields correctly.";
-	} else {
-		document.getElementById("msg").innerText = "";
 	}
 
-	return isValid;
+	return false;
 }
+
+document.querySelector("form").onsubmit = validateForm;
