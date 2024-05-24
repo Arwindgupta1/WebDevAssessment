@@ -1,7 +1,8 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-const db = require("./database");
+const db1 = require("./public/scripts/setupDB");
+const db2 = require("./database");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -11,12 +12,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-	res.sendFile(path.join(__dirname, "public", "index.html"));
+	res.sendFile(path.join(__dirname, "public", "html", "index.html"));
+});
+
+app.get("/lineup/:year", (req, res) => {
+	const year = parseInt(req.params.year, 10);
+	db1.all(
+		`SELECT artist, time FROM lineup WHERE year = ?`,
+		[year],
+		(err, rows) => {
+			if (err) {
+				res.status(500).send(err);
+			} else {
+				res.json(rows);
+			}
+		}
+	);
 });
 
 app.post("/submit-form", (req, res) => {
 	const { name, email, message } = req.body;
-	db.run(
+	db2.run(
 		"INSERT INTO formdata (name, email, message) VALUES (?, ?, ?)",
 		[name, email, message],
 		function (err) {

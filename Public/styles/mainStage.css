@@ -1,0 +1,49 @@
+/* public/styles.css */
+body {
+	font-family: Arial, sans-serif;
+	margin: 20px;
+	background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+	background-size: 400% 400%;
+	animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1 {
+	text-align: center;
+}
+
+.year-selection {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.year-selection label {
+	margin: 0 10px;
+	font-size: 18px;
+}
+
+.lineup {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+
+.artist {
+	background-color: #f0f0f0;
+	padding: 20px;
+	border-radius: 10px;
+	width: 200px;
+	text-align: center;
+}
