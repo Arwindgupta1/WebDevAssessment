@@ -1,0 +1,113 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(45deg, #ff6f00, #ffff00);
+	color: #fff;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.faq,
+.schedule {
+	margin-top: 50px;
+}
+
+.faq h2,
+.schedule h2 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.faq-item,
+.schedule-item {
+	margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 15px;
+	border-radius: 10px;
+	transition: background 0.3s ease;
+}
+
+.faq-item:hover,
+.schedule-item:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.faq-item h3,
+.schedule-item h3 {
+	margin: 0;
+	cursor: pointer;
+	position: relative;
+}
+
+.faq-item h3::after,
+.schedule-item h3::after {
+	content: "+";
+	position: absolute;
+	right: 0;
+	transition: transform 0.3s ease;
+}
+
+.faq-item.active h3::after,
+.schedule-item.active h3::after {
+	transform: rotate(45deg);
+}
+
+.faq-item div,
+.schedule-item div {
+	display: none;
+	margin-top: 10px;
+}
+
+.faq-item.active div,
+.schedule-item.active div {
+	display: block;
+}
+
+.schedule-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+	padding: 10px;
+	border: 1px solid #fff;
+	text-align: left;
+}
+
+.schedule-table th {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.345);
+	margin-top: 50px;
+	color: #fff;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+@media (max-width: 600px) {
+	.schedule-table th,
+	.schedule-table td {
+		padding: 8px;
+	}
+
+	.faq-item,
+	.schedule-item {
+		padding: 10px;
+	}
+}
