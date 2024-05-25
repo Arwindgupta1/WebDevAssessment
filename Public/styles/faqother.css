@@ -1,0 +1,86 @@
+body {
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(120deg, #84fab0, #8fd3f4);
+	color: #333;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 30px;
+	color: #fff;
+}
+
+.faq {
+	margin-top: 50px;
+}
+
+.faq h2 {
+	text-align: center;
+	margin-bottom: 30px;
+	color: #fff;
+}
+
+.faq-item {
+	margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 15px;
+	border-radius: 10px;
+	transition: background 0.3s ease;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item:hover {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.faq-item h3 {
+	margin: 0;
+	cursor: pointer;
+	position: relative;
+	color: #333;
+}
+
+.faq-item h3::after {
+	content: "+";
+	position: absolute;
+	right: 0;
+	transition: transform 0.3s ease;
+	color: #333;
+}
+
+.faq-item.active h3::after {
+	transform: rotate(45deg);
+}
+
+.faq-item div {
+	display: none;
+	margin-top: 10px;
+	color: #333;
+}
+
+.faq-item.active div {
+	display: block;
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.5);
+	margin-top: 50px;
+	color: #fff;
+}
+
+@media (max-width: 600px) {
+	.faq-item {
+		padding: 10px;
+	}
+}
