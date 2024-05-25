@@ -19,34 +19,9 @@
         <div class="lineup" id="lineup"></div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const lineupDiv = document.getElementById('lineup');
-            const radios = document.querySelectorAll('input[name="year"]');
 
-            const fetchLineup = (year) => {
-                fetch(`/lineup/${year}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        lineupDiv.innerHTML = '';
-                        data.forEach(artist => {
-                            const artistDiv = document.createElement('div');
-                            artistDiv.classList.add('artist');
-                            artistDiv.innerHTML = `<div class="artist-name">${artist.artist}</div><div class="artist-time">${artist.time}</div>`;
-                            lineupDiv.appendChild(artistDiv);
-                        });
-                    });
-            };
 
-            radios.forEach(radio => {
-                radio.addEventListener('change', () => {
-                    fetchLineup(radio.value);
-                });
-            });
-
-            fetchLineup(2024);  // Fetch initial data for the default year
-        });
-    </script>
+    <script src="../scripts/mainStageLineup.js"></script>
 </body>
 
 </html>
