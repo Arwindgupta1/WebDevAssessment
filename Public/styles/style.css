@@ -356,6 +356,10 @@ form .btn2 {
 		font-size: 30px;
 	}
 
+	.logo {
+		width: 40px;
+	}
+
 	/* ---------contact-------- */
 	.contact-left {
 		flex-basis: 30%;
@@ -394,7 +398,7 @@ form .btn2 {
 @media only screen and (min-width: 601px) and (max-width: 900px) {
 	.logo {
 		margin: 5px 0;
-		width: 40px;
+		width: 30px;
 		border-radius: 45%;
 	}
 
@@ -467,10 +471,14 @@ nav .menu {
 	}
 	.header-text {
 		margin-top: 10%;
-		font-size: 16px;
+		font-size: 14px;
 	}
 	.header-text h1 {
 		font-size: 30px;
+	}
+
+	logo {
+		width: 15px;
 	}
 
 	nav .menu {
@@ -492,7 +500,7 @@ nav .menu {
 	}
 	nav ul li {
 		display: block;
-		margin: 25px;
+		margin: 22px;
 	}
 
 	nav ul .menu {
